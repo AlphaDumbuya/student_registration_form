@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration | New Student</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100">
+    <header class="w-full py-6 shadow-lg flex justify-center items-center">
+        <nav class="space-x-6">
+            <a class="text-gray-600 font-bold" href="./index.html">All Students</a>
+            <a class="text-gray-600 font-bold text-teal-500" href="./new-student.html">New Student</a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto py-12">
+        <h1 class="text-xl md:text-3xl font-semibold text-gray-6700">Register New Student</h1>
+
+        <form class="shadow-xl p-10 rounded-md border-t-4 border-teal-600 mt-8">
+            <div class="mb-6">
+                <h2 class="text-xl font-bold text-gray-600 border-b-2">Personal Details</h2>
+
+                <div class="flex p-6">
+                    <div class="w-1/5 mr-8">
+                        <p class="text-gray-500">Information about a student needs to be inputed in the fields on the right as required.</p>
+                    </div>
+                    <div class="w-4/5">
+                        <div class="flex justify-between">
+                            <div class="mb-4">
+                                <label class="block mb-1" for="firstName">First Name</label>
+                                <input id="firstName" class="border border-gray-300 rounded-md py-2 px-4 focus:outline-teal-500 w-[350px]" type="text" required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block mb-1" for="middleName">Middle Name</label>
+                                <input id="middleName" class="border border-gray-300 rounded-md py-2 px-4 focus:outline-teal-500 w-[350px]" type="text">
+                            </div>
+                            <div class="mb-4">
+                                <label class="block mb-1" for="lastName">Last Name</label>
+                                <input id="lastName" class="border border-gray-300 rounded-md py-2 px-4 focus:outline-teal-500 w-[350px]" type="text" required>
+                            </div>
+                        </div>
+                        <div class="flex justify-between">
+                            <div class="mb-4">
+                                <label class="block mb-1" for="dateOfBirth">Date of Birth</label>
+                                <input id="dateOfBirth" class="border border-gray-300 rounded-md py-2 px-4 focus:outline-teal-500 w-[350px]" type="date" required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block mb-1" for="placeOfBirth">Place of Birth</label>
+                                <input id="placeOfBirth" class="border border-gray-300 rounded-md py-2 px-4 focus:outline-teal-500 w-[350px]" type="text">
+                            </div>
+                            <div class="mb-4">
+                                <label class="block mb-1" >Gender</label>
+                                <div class="w-[350px] flex space-x-4">
+                                    <label for="male">Male</label>
+                                    <input type="radio" id="male" name="gender"> 
+                                    <label for="female">Female</label>
+                                    <input type="radio" id="female" name="gender">
+                                    <label for="other">Other</label>
+                                    <input type="radio" id="other" name="gender">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <h2 class="text-xl font-bold text-gray-600 border-b-2">Contact Details</h2>
+
+                <div class="flex p-6">
+                    <div class="w-1/5 mr-8">
+                        <p class="text-gray-500">Contact Information about a student for emmergency or personal purposes.</p>
+                    </div>
+                    <div class="w-4/5">
+                        <div class="flex justify-between">
+                            <div class="mb-4">
+                                <label class="block mb-1" for="address">Permanent Address</label>
+                                <input id="address" class="border border-gray-300 rounded-md py-2 px-4 focus:outline-teal-500 w-[350px]" type="text" required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block mb-1" for="email">Email</label>
+                                <input id="email" class="border border-gray-300 rounded-md py-2 px-4 focus:outline-teal-500 w-[350px]" type="text">
+                            </div>
+                            <div class="mb-4">
+                                <label class="block mb-1" for="phoneNumber">Phone</label>
+                                <input id="phoneNumber" class="border border-gray-300 rounded-md py-2 px-4 focus:outline-teal-500 w-[350px]" type="text" required>
+                            </div>
+                        </div>
+                        <div class="flex justify-between">
+                            <div class="mb-4">
+                                <label class="block mb-1" for="emmergencyPhone">Emmergency Phone</label>
+                                <input id="emmergencyPhone" class="border border-gray-300 rounded-md py-2 px-4 focus:outline-teal-500 w-[350px]" type="text" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <h2 class="text-xl font-bold text-gray-600 border-b-2">Educational Details</h2>
+
+                <div class="flex p-6">
+                    <div class="w-1/5 mr-8">
+                        <p class="text-gray-500">Educationl Information about a student needs to be inputed in the fields on the right as required to know the student's previous education track records.</p>
+                    </div>
+                    <div class="w-4/5">
+                        <div class="flex justify-between">
+                            <div class="mb-4">
+                                <label class="block mb-1" for="educationLevel">Educational Level</label>
+                                <select name="educationLevel" id="educationLevel" class="border border-gray-300 rounded-md py-2 px-4 focus:outline-teal-500 w-[350px]" required>
+                                    <option>Please select educational level</option>
+                                    <option value="NPSE">NPSE</option>
+                                    <option value="BECE">BECE</option>
+                                    <option value="WASSCE">WASSCE</option>
+                                    <option value="Tech Voc">Tech Voc</option>
+                                    <option value="Limkokwing">College</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block mb-1" for="universityOrSchool">University or School Attended</label>
+                                <select name="universityOrSchool" id="universityOrSchool" class="border border-gray-300 rounded-md py-2 px-4 focus:outline-teal-500 w-[350px]" required>
+                                    <option>Please select university or school</option>
+                                    <option value="SLMB">SLMB</option>
+                                    <option value="Saint Francis">Saint Francis</option>
+                                    <option value="MBHS">MBHS</option>
+                                    <option value="Ahmadiyya">Ahmadiyya</option>
+                                    <option value="Limkokwing">Limkokwing</option>
+                                    <option value="USL">USL</option>
+                                    <option value="UNIMTECH">UNIMTECH</option>
+                                    <option value="COMAHS">COMAHS</option>
+                                    <option value="Njala University">Njala University</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block mb-1" for="degreeOrCertificate">Degree or Certificate</label>
+                                <input id="degreeOrCertificate" class="border border-gray-300 rounded-md py-2 px-4 focus:outline-teal-500 w-[350px]" type="text" required>
+                            </div>
+                        </div>
+                        <div class="flex justify-between">
+                            <div class="mb-4">
+                                <label class="block mb-1" for="programStudied">Program Studied</label>
+                                <input id="programStudied" class="border border-gray-300 rounded-md py-2 px-4 focus:outline-teal-500 w-[350px]" type="text" required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block mb-1" for="graduatedDate">Graduated Date</label>
+                                <input id="graduatedDate" class="border border-gray-300 rounded-md py-2 px-4 focus:outline-teal-500 w-[350px]" type="date">
+                            </div>
+                            <div class="mb-4">
+                                <label class="block mb-1" for="specialization">Specialization</label>
+                                <input id="specialization" class="border border-gray-300 rounded-md py-2 px-4 focus:outline-teal-500 w-[350px]" type="date">
+                            </div>
+                        </div>
+                        <div class="flex justify-between">
+                            <div class="mb-4">
+                                <label class="block mb-1" for="gradePoint">CGPA</label>
+                                <input id="gradePoint" class="border border-gray-300 rounded-md py-2 px-4 focus:outline-teal-500 w-[350px]" type="number" max="4" placeholder="4.0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <h2 class="text-xl font-bold text-gray-600 border-b-2">Family Details</h2>
+
+                <div class="flex p-6">
+                    <div class="w-1/5 mr-8">
+                        <p class="text-gray-500">Information about a student needs to be inputed in the fields on the right as required.</p>
+                    </div>
+
+                    <div class="w-4/5">
+                        <div class="flex justify-between">
+                            <div class="mb-4">
+                                <label class="block mb-1" for="firstName">First Name</label>
+                                <input id="firstName" class="border border-gray-300 rounded-md py-2 px-4 focus:outline-teal-500 w-[350px]" type="text" required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block mb-1" for="middleName">Middle Name</label>
+                                <input id="middleName" class="border border-gray-300 rounded-md py-2 px-4 focus:outline-teal-500 w-[350px]" type="text">
+                            </div>
+                            <div class="mb-4">
+                                <label class="block mb-1" for="lastName">Last Name</label>
+                                <input id="lastName" class="border border-gray-300 rounded-md py-2 px-4 focus:outline-teal-500 w-[350px]" type="text" required>
+                            </div>
+                        </div>
+                        <!-- TODO IF NEED BE -->
+                    </div>
+
+                </div>
+            </div>
+
+        </form>
+    </main>
+</body>
+</html> 
